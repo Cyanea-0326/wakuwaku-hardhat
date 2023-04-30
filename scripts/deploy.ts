@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 async function main() {
   const [deployer] = await ethers.getSigners();
   console.log("Account balance:", (await deployer.getBalance()).toString());
-  console.log(deployer.address);
+  console.log("console.log deployer:",deployer);
 
   const Lock = await ethers.getContractFactory("Nft");
   const lock = await Lock.deploy();
